@@ -4,6 +4,7 @@ import HelloWorld from '@/components/HelloWorld'
 import FirstPage from '@/components/FirstPage'
 import SecondPage from '@/components/Secondpage'
 import ThirdPage from '@/components/Thirdpage'
+import FourthPage from '@/components/Fourthpage'
 import axios from 'axios'
 
 Vue.prototype.$http = axios
@@ -17,19 +18,24 @@ export default new Router({
       component: HelloWorld
     },
     {
-      path: '/one',
+      path: '/1',
       name: 'FirstPage',
       component: FirstPage
     },
     {
-      path: '/two',
+      path: '/2',
       name: 'SecondPage',
       component: SecondPage
     },
     {
-      path: '/three',
+      path: '/3',
       name: 'ThirdPage',
       component: ThirdPage
+    },
+    {
+      path: '/4',
+      name: 'FourthPage',
+      component: FourthPage
     }
   ]
 })

@@ -42,13 +42,6 @@ export default {
       this.xname = event.srcElement.src
       alert(this.xname)
     }
-    /* ChoosePic () {
-      let x = ''
-      onclick(function () {
-        this.ShowRightIcon = true
-        x.src = this.src
-      })
-    } */
   }
 }
 </script>
