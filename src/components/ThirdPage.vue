@@ -1,24 +1,11 @@
 <template>
   <div>
     <Header></Header>
-    <p>输入你要的东西</p>
-    <input type="text" autofocus >
-    <p><input
-      type="checkbox">
-    </p>
-      <img src="../../static/img/icon1.jpg" height="100" width="100" alt="icon1" @click="onclick">
-      <img src="../../static/img/icon2.jpg" height="100" width="100" alt="icon2" @click="onclick">
-    <!-- <img :src= 'xname' height="100" width="100" alt="" @click="onclick"> -->
-    <p><span v-for="(item, index) in items" :key="index">
-      <img v-if="checkedvalue== index" :src= 'xname' height="100" width="100" alt="" @click="onclick">
-      <img v-else-if="checkedvalue!= index" src="../../static/img/icon4.jpg" height="100" width="100" alt="" @click="onclick">
-    </span></p>
-    <p v-for="(item, index) in items" :key="index"> <input type="radio" name="group1" v-model="checkedvalue" :value= index> {{item}} </p>
-    <p>
-      <a @click="GoOne">返回主页</a>
-      <!-- <a onclick="alert('a')">返回主页</a> -->
-    </p>
-    <span>Picked: {{ checkedvalue }}</span>
+    <div class= "overbox">
+      <span v-for="item in lists" :key= "item">
+        <img :src= "item.img" class= "pic">
+      </span>
+    </div>
   </div>
 </template>
 <script>
@@ -26,31 +13,29 @@ import Header from './Header.vue'
 export default {
   data () {
     return {
-      checkedvalue: '',
-      items: [1, 31, 3, 4, 5, 6],
-      xname: ''
+      lists: [
+        { img: '../../static/img/showpic (1).jpg' },
+        { img: '../../static/img/showpic (2).jpg' },
+        { img: '../../static/img/showpic (3).jpg' },
+        { img: '../../static/img/showpic (4).jpg' },
+        { img: '../../static/img/showpic (5).jpg' },
+        { img: '../../static/img/showpic (6).jpg' },
+        { img: '../../static/img/showpic (7).jpg' },
+        { img: '../../static/img/showpic (8).jpg' },
+        { img: '../../static/img/showpic (9).jpg' },
+        { img: '../../static/img/showpic (10).jpg' },
+        { img: '../../static/img/showpic (16).jpg' },
+        { img: '../../static/img/Pic3.jpg' }
+      ]
     }
   },
   components: {
     Header
   },
   methods: {
-    GoOne: function () {
-      this.$router.push({path: '/one'})
-    },
-    onclick: function () {
-      this.xname = event.srcElement.src
-      alert(this.xname)
-    }
-    /* ChoosePic () {
-      let x = ''
-      onclick(function () {
-        this.ShowRightIcon = true
-        x.src = this.src
-      })
-    } */
   }
 }
 </script>
 <style  lang="stylus" scoped>
+ @import '../style/ShowPic'
 </style>
