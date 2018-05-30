@@ -36,9 +36,9 @@ export default {
     Header
   },
   methods: {
-    GoOne: function () {
-      this.$router.push({path: '/one'})
-    },
+    // GoOne: function () {
+    //   this.$router.push({path: '/1'})
+    // },
     onclick: function () {
       this.xname = event.srcElement.src
       document.getElementsByName('SetPic')[this.checkedvalue].setAttribute('src', this.xname)

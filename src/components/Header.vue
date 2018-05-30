@@ -1,64 +1,40 @@
 <template>
-  <header>
     <div class="div1">
-    </div>
-    <div class="div2">
-     <div class="div3">
-     </div>
-      <ul style="color: #8C1616;">
-        <li><a href="biaoge.html">烟大新闻</a></li>
-        <li><a href="biaoge.html">学校概况</a>
-            <ul class="li1">
-              <li class="c">学校简介</li>
-              <li class="c">现任领导</li>
-              <li class="c">校园风景</li>
-            </ul>
-        </li>
-        <li>学院设置</li>
-        <li>人才培养
-          <ul class="li1">
-            <li class="c">本科生教育</li>
-            <li class="c">留学生教育</li>
-            <li class="c">研究生教育</li>
-          </ul>
-        </li>
-        <li>科学研究
-          <ul class="li1">
-            <li class="c">服务地方网</li>
-            <li class="c">烟大学报</li>
-            <li class="c">研究生处</li>
-          </ul>
-        </li>
-        <li>学生工作</li>
-        <li>招生就业</li>
-        <li>公共服务</li>
-      </ul>
-    </div>
-  </header>
+      <ul>
+      <li><a href="http://www.sina.com.cn"><img class="img1" src="../../static/img/icon5.jpg"></a>
+        <ul class="li1">
+          <li class="c" @click="GoFour">订制</li>
+          <li class="c" @click="GoThree">现货</li>
+          <li class="c" @click="GoOne">返回首页</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
 </template>
 <script>
 export default {
+  methods: {
+    GoFour: function () {
+      this.$router.push({path: '/4'})
+    },
+    GoThree: function () {
+      this.$router.push({path: '/3'})
+    },
+    GoOne: function () {
+      this.$router.push({path: '/1'})
+    }
+  }
 }
 </script>
 <style lang="stylus" scoped>
  .div1{
-    float: left;
-    width: 317px;
-    height: 107px;
-  }
-  .div2{
-    float: right;
-    width: 696px;
-    height: 107px;
-    background-color:#032F54;
-  }
-  .div3{
-    height: 72px;
-    width: 701px;
+    z-index:10;
+    position:fixed;
+    right:100px;
+    top:50px;
   }
   li{
     list-style: none;
-    background-color: #8C1616;
     float: left;
     width: 87px;
     height: 35px;
@@ -72,7 +48,7 @@ export default {
     visibility: hidden;
   }
   li:hover{
-    background-color: #032F54;
+    background-color: ;
     cursor: pointer;
   }
   li:hover .li1{
@@ -89,5 +65,11 @@ export default {
   a{
     text-decoration: none;
     color: white;
+  }
+  .img1{
+    border-radius:50px;
+    width: 50%;
+    filter: blur(1px);
+    float: right
   }
 </style>
