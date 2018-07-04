@@ -6,6 +6,7 @@ import SecondPage from '@/components/Secondpage'
 import ThirdPage from '@/components/Thirdpage'
 import FourthPage from '@/components/Fourthpage'
 import LoginPage from '@/components/Loginpage'
+import Cart from '@/components/Cart'
 import axios from 'axios'
 
 Vue.prototype.$http = axios
@@ -37,6 +38,11 @@ export default new Router({
       path: '/4',
       name: 'FourthPage',
       component: FourthPage
+    },
+    {
+      path: '/cart',
+      name: 'Cart',
+      component: Cart
     },
     {
       path: '/login',
