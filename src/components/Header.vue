@@ -1,11 +1,12 @@
 <template>
     <div class="div1">
       <ul>
-      <li><a href="http://www.sina.com.cn"><img class="img1" src="../../static/img/icon5.jpg"></a>
+      <li><img class="img1" src="../../static/img/icon3.jpg">
         <ul class="li1">
           <li class="c" @click="GoFour">订制</li>
           <li class="c" @click="GoThree">现货</li>
           <li class="c" @click="GoOne">返回首页</li>
+          <li class="c" @click="GoLogin">登录</li>
         </ul>
       </li>
     </ul>
@@ -21,7 +22,10 @@ export default {
       this.$router.push({path: '/3'})
     },
     GoOne: function () {
-      this.$router.push({path: '/1'})
+      this.$router.push({path: '/2'})
+    },
+    GoLogin: function () {
+      this.$router.push({path: '/login'})
     }
   }
 }
@@ -67,6 +71,7 @@ export default {
     color: white;
   }
   .img1{
+    border-style:dotted;
     border-radius:50px;
     width: 50%;
     filter: blur(1px);

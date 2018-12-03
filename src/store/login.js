@@ -1,7 +1,7 @@
 export default {
   state: {
     logined: false,
-    logineduser: {
+    exlogineduser: {
       name: '',
       avatar: '',
       username: ''

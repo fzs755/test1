@@ -1,15 +1,19 @@
 <template>
-  <div>
+  <div class="whole">
+    <Header1></Header1>
     <Header></Header>
     <div class= "overbox">
       <span v-for="item in lists" :key= "item">
-        <img :src= "item.img" class= "pic">
+        <img :src= "item.img" class= "pic" @click= "click1">
       </span>
     </div>
+    <Footer></Footer>
   </div>
 </template>
 <script>
 import Header from './Header.vue'
+import Header1 from './Header1.vue'
+import Footer from './Footer.vue'
 export default {
   data () {
     return {
@@ -30,12 +34,29 @@ export default {
     }
   },
   components: {
-    Header
+    Header, Header1, Footer
+  },
+  beforeMount () {
+    document.getElementsByTagName('body')[0].setattribute('className', 'asdf')
+  },
+  beforeDestroy () {
+    document.body.removeAttribute('x')
   },
   methods: {
+    click1: function () {
+      window.location.href = event.srcElement.src
+    }
   }
+  /* mounted: function () {
+    this.getElementsByTagName('div')[0].style.background = 'red'
+  } */
 }
 </script>
 <style  lang="stylus" scoped>
  @import '../style/ShowPic'
+  .asdf{
+    margin:300;
+    border:0;
+    background: black
+ }
 </style>

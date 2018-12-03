@@ -10,7 +10,7 @@ export default {
 <style lang="stylus" scoped>
   footer{
     z-index:10;
-    position:fixed;
+    // position:fixed;
     bottom: 100px;
     text-align: center
   }

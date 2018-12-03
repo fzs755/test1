@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Header1></Header1>
     <Header></Header>
     <p>输入你要的东西</p>
     <input type="text" autofocus >
@@ -19,10 +20,13 @@
       <!-- <a onclick="alert('a')">返回主页</a> -->
     </p>
     <span>Picked: {{ checkedvalue+1 }}</span>
+    <Footer></Footer>
   </div>
 </template>
 <script>
+import Header1 from './Header1.vue'
 import Header from './Header.vue'
+import Footer from './Footer.vue'
 export default {
   data () {
     return {
@@ -33,7 +37,7 @@ export default {
     }
   },
   components: {
-    Header
+    Header, Header1, Footer
   },
   methods: {
     // GoOne: function () {

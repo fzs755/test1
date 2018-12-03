@@ -3,7 +3,7 @@
     <form autoComplete="on" :model="loginForm" :rules="loginRules" ref="loginForm" label-position="left"
     label-width="0px"
     class="card-box login-form">
-      <h3 class="title">登录</h3>
+      <h3 class="title">登录222</h3>
       <input name="name" type="text" v-model="loginForm.name" autoComplete="on"
       placeholder="用户名"/>
       <input name="password" :type="pwdType" @keyup.enter.native="handleLogin" v-model="loginForm.password"
