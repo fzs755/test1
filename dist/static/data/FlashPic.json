@@ -1,0 +1,13 @@
+[{
+   "id":1,
+   "address":"./static/img/Pic1.jpg"
+ },
+ {
+    "id":2,
+    "address":"./static/img/Pic2.jpg"
+ },
+ {
+    "id":3,
+    "address":"./static/img/Pic3.jpg"
+ }
+]
