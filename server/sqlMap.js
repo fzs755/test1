@@ -2,7 +2,7 @@
 var sqlMap = {
   // 用户
   user: {
-    add: 'insert into testusers(user_name, password) values (?, ?)'
+    add: 'insert into users(name, age) values (?, ?)'
   }
 }
 

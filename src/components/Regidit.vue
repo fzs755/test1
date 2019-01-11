@@ -2,7 +2,7 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <form>
-      <input type="text" name="username" v-model="user_name"> <br>
+      <input type="text" name="userName" v-model="userName"> <br>
       <input type="text" name="age" v-model="password"> <br>
       <a href="javascript:;" @click="addUser">提交</a>
     </form>
@@ -15,16 +15,16 @@ export default {
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',
-      user_name: '',
+      userName: '',
       password: ''
     }
   },
   methods: {
     addUser () {
-      var name = this.user_name
+      var userName = this.userName
       var password = this.password
       this.$http.post('/api/user/addUser', {
-        user_name: name,
+        userName: userName,
         password: password
       }, {}).then((response) => {
         console.log(response)

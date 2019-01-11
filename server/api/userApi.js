@@ -20,10 +20,11 @@ var jsonWrite = function (res, ret) {
 }
 // 增加用户接口
 router.post('/addUser', (req, res) => {
-  var sql = $sql.testusers.add
+  // var sql=$sql.user.add
+  var sql = 'insert into `user`(name,age) values(?,?)'
   var params = req.body
   console.log(params)
-  conn.query(sql, [params.user_name, params.password], function (err, result) {
+  conn.query(sql, [params.userName, params.password], function (err, result) {
     if (err) {
       console.log(err)
     }
